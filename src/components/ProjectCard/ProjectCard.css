@@ -1,0 +1,75 @@
+.card-wrapper {
+        width: 100%;
+        height: auto;
+        position: relative;
+        
+    }
+
+.image-card {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+
+        z-index: 100;
+        
+}
+
+.vechicle-card {
+    display: flex;
+    position: relative;
+    background-color: #FFF59D;
+    
+    width: 165px;
+    height: 45px;
+    
+    top: 100px;
+    left: 40px;
+
+    z-index: 150;
+
+    border-radius: 20px;
+
+    justify-content: center; 
+    align-items: center; 
+
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.passangers-card {
+    display: flex;
+    position: relative;
+    background-color: #FFF59D;
+    
+    width: 165px;
+    height: 45px;
+    
+    top: 110px;
+    left: 40px;
+
+    z-index: 150;
+
+    border-radius: 20px;
+
+    justify-content: center; 
+    align-items: center; 
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.title-card {
+    position: relative;
+    font-size: 45px;
+    font-weight: 400;
+    
+    bottom: 90px;
+    left: 40px;
+    color: white;
+
+    z-index: 150;
+
+
+
+}
