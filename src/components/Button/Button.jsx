@@ -5,10 +5,11 @@
 import React from 'react'
 import './Button.css'
 
-function Button ({text, onClick}) {
+function Button ({text, isDisabled, onClick}) {
 
     return (
         <button 
+        disabled={isDisabled}
         onClick={onClick}
         className='btn-default'
         >
