@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-unused-vars */
 import React, {useState} from 'react'
+import { v4 as uuidv4 } from 'uuid';
 
 import './HeaderSection.css';
 import Heading from '../Heading/Heading';
@@ -16,24 +17,44 @@ const MIN_COUNTER_VALUE = -5;
 function HeaderSection () {
     const [counter, setCounter] = useState(INITIAL_COUNTER_VALUE)
     const [logs, setLogs] = useState([])
-    const [btnClicked, setBtnClicked] = useState([])
+    
 
     function handlePlusBtnClick (){
+        const newValue = counter + COUNTER_STEP;
+
+        const log = {
+            id: uuidv4(),
+            action: 'plus',
+            prevValue: counter,
+            newValue: newValue ,
+        }
+
+
         setCounter((prevCounter) => {
             return prevCounter + COUNTER_STEP
         });
-        setLogs([...logs, counter]); // spread оператор
-        setBtnClicked([...btnClicked, '+'])
+        setLogs([...logs, log]); // spread оператор
+        
 
     }
 
     function handleMinusBtnClick (){
+        const newValue = counter - COUNTER_STEP;
+
+        const log = {
+            id: uuidv4(),
+            action: 'minus',
+            prevValue: counter,
+            newValue: newValue ,
+        }
     
         setCounter(((prevCounter) => {
             return prevCounter - COUNTER_STEP
         }))
-        setLogs([...logs, counter])
-        setBtnClicked([...btnClicked, '-'])
+        setLogs([...logs, log])
+
+        
+       
     }
 
     function isMinusBtnDisabled () {
@@ -76,7 +97,7 @@ function HeaderSection () {
 
             <Logs 
             logs={logs} 
-            btnClicked = {btnClicked}
+        
             />
         </>
     )
