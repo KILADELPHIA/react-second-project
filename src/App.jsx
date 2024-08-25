@@ -3,6 +3,7 @@ import React from 'react'
 import HeaderSection from './components/HeaderSection/HeaderSection.jsx';
 import ProjectsSection from './components/ProjectsSection/ProjectsSection.jsx';
 import BIOSection from './components/BIOSection/BIOSection.jsx';
+import APITest from './components/APITest/APITest.jsx';
 
 function App() {
 
@@ -11,6 +12,8 @@ function App() {
       <HeaderSection/>
       <BIOSection/>
       <ProjectsSection/>
+
+      <APITest/>
     </div>
   )
 }
